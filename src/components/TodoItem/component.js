@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import './assets/style.css'
 
 const TodoItem = ({ id, text, finish, removeItem, toggleItem }) => (
@@ -9,5 +9,17 @@ const TodoItem = ({ id, text, finish, removeItem, toggleItem }) => (
     </li>
   </div>
   )
+TodoItem.propTypes = {
+  id: PropTypes.number,
+  text: PropTypes.string,
+  finish: PropTypes.bool,
+  removeItem: PropTypes.func.isRequired,
+  toggleItem: PropTypes.func.isRequired
+}
+TodoItem.defaultProps = {
+  id: 1,
+  text: 'text',
+  finish: true
+}
 
 export default TodoItem

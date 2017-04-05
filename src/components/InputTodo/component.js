@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 class InputTodo extends Component {
   state = {
@@ -23,10 +23,17 @@ class InputTodo extends Component {
   render() {
     return (
       <div>
-        <input type="text" placeholder="what would you to do?" value={this.state.inputText} onChange={this.eventChange} onKeyPress={this.eventEnter} />
+        <input
+          type="text" placeholder="what would you to do?"
+          value={this.state.inputText} onChange={this.eventChange} onKeyPress={this.eventEnter}
+        />
       </div>
     )
   }
+}
+
+InputTodo.propTypes = {
+  addInput: PropTypes.func.isRequired
 }
 
 export default InputTodo

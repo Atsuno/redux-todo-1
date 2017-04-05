@@ -1,5 +1,8 @@
 import React from 'react'
 import logo from './assets/logo.svg'
+import InputTodo from '../InputTodo'
+import TodoList from '../TodoList'
+import ShowTodo from '../ShowTodo'
 import './assets/style.css'
 
 const App = () => (
@@ -10,6 +13,9 @@ const App = () => (
     </div>
     <div className="App-intro">
       vCode Dev-Tools<br /><br />
+      <InputTodo />
+      <ShowTodo />
+      <TodoList />
     </div>
   </div>
 )

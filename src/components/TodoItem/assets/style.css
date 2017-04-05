@@ -1,0 +1,9 @@
+.finish {
+	color: red;
+	font-style: italic;
+	text-decoration-line: line-through;
+}
+
+.unfinish {
+	color: black;
+}

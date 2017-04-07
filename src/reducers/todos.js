@@ -18,6 +18,9 @@ export default (todos = initialStore.todos, action) => {
     case TYPE.TODO.TOGGLE: {
       return todos.map(todo => todo.id === action.payload.id ? { ...todo, finish: !todo.finish } : todo)
     }
+    case TYPE.SEARCH.TODO: {
+      return todos.map(todo => todo.id === action.payload.id ? { ...todo, text: todo.text.includes(event.target.value) } : todo)
+    }
     default: {
       return todos
     }

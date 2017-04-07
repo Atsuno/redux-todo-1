@@ -14,3 +14,8 @@ export const toggleItem = id => ({
   type: TYPE.TODO.TOGGLE,
   payload: { id }
 })
+
+export const searchTodo = text => ({
+  type: TYPE.SEARCH.TODO,
+  payload: { text }
+})

@@ -1,6 +1,6 @@
 import TYPE from './types'
 
 export const showFilterTodo = (finish, unfinish) => ({
-  type: TYPE.FILTER.TODO,
+  type: TYPE.SWITCH.TODO,
   payload: { finish, unfinish }
 })
